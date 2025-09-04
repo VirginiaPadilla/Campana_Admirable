@@ -1,0 +1,13 @@
+
+
+:-use_module(library(janus)).
+
+ 
+initialize
+
+
+% : Ejecutar script
+
+campana :-  py_call('Ruta_campana').
+
+batalla :- py_call('Sitio_Batallas').

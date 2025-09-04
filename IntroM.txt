@@ -1,0 +1,194 @@
+
+
+
+\section{Introduction}
+The teaching of history is rich and complex, highlighting its importance in developing critical thinking and citizenship, in building a collective identity, and in fostering an understanding of different cultures and perspectives. It also provides tools for analyzing today's society and making informed decisions about the future.
+
+This workshop proposes the use of Prolog to teach history through gamification. The motivation for this exercise stems from my passion for studying history. It is an exercise to demonstrate that historical events, which are filled with diverse characters, actions, and decisions, can be portrayed through the use of Prolog.
+
+As a precedent for the use of Prolog in history teaching, we find the exercise conducted by Daniel Weissberg, where he describes the complexity of the population that inhabited the castle of Montsegur during the siege it suffered in 1244. The author emphasizes that the use of computers as a research tool in the humanities requires first establishing an appropriate knowledge representation structure, and this structure, however coherent with the problem at hand, inevitably and strongly influences subsequent qualitative use and interpretation.
+
+There is interest in (re)promoting the use of Prolog in primary and secondary schools, as evidenced by the work of Cervoni, Cechi, Herme, among others. Teaching Prolog in schools represents an opportunity to provide students with the skills to develop logical thinking, identify entities (e.g., objects, concepts) and the relationships between them, and understand, incorporate, and appropriately use the relevant rules of logical inference to derive new implicit ideas and to reason and choose between different logical formulations of the same problem. [Cechi, ]
+
+The (re)introduction of Prolog into the secondary education system and its use as a complement to traditional subjects provides a new and enriching way of learning that can facilitate the acquisition of certain knowledge. [Cervoni, ] \cite{Cervoni2023}. It also represents
+an opportunity to present a programming paradigm that presents characteristics of imperative, object-oriented, or functional programming. [hermenegildo,] \cite{Hermenegildo2023}
+
+The idea of ​​this workshop is centered on using an agent, which I have called VBot. Vbot has a knowledge base and is equipped with the ability to use the correct functionality and information to interact with its surrounding environment. This is where its knowledge base must be built, which I have called Vbot's brain. Vbot has the ability to present the geographic environment of the facts. To build the interface, Prolog has been integrated with Folium, a Python library for geospatial data visualization.
+The workshop structure has three stages. The first stage presents the fundamental concepts associated with the language, such as facts, entities, and relationships. The programming language for building the knowledge base is also introduced, which could be blocky Prolog (Prolog visual implementation and web tools) due to its visual representation of the language's constructs.
+
+The second stage is dedicated to building Vbot's brain. To do this, the student must establish entities, ground relationships with just one argument, ground binary relationships, and relationships with more than two entities. The agent's knowledge base is complemented by knowledge of the previously defined geographic environment of the events.
+
+For the third-period activities, which focus on interrogating Vbots, a trivia program has been designed. Students can formulate and answer true/false questions, simple queries, and rule-based queries with the help of Vbots. They can also formulate questions associated with the location of the sites where the events occurred, among others related to the geographic environment. The context of the workshop is described below.
+
+2. Workshop design
+Children enrolled in the fourth grade of primary school, aged 9-11, are the target audience for this
+activity. According to the Venezuela Curriculum [1], the curriculum is oriented toward integrative axes,
+defined as cross-cutting themes that connect different areas of knowledge around a common topic,
+promoting a holistic vision of learning. As a methodological strategy, project-based learning can be
+used, in which a series of tasks based on the resolution of questions or problems is implemented through
+a creation process that allows students to work with a certain degree of autonomy and cooperation,
+culminating in the presentation of a final product.
+For this project, the integrative axis selected was "Geography, History, Homeland, and Citizenship,"
+and the content developed was "Reconocimiento de la ruta de La Campaña Admirable y Campaña de
+Oriente." The workshop will build content related to La Campaña Admirable. The Vebot goes to school
+workshop is set for three academic hours:
+• Vebot goes to the school workshop: The first hour presents the objective of the workshop, the
+tool to build the Vebot knowledge base. To do this, the concepts of facts, objects, and relationships
+must be explained, and how they are represented in the programming language.
+• The brain’s Vebot: In the second hour, students must extract information from the provided text
+and encode it according to the provided programming language. You are also instructed on how
+to formulate ground atomic queries, atomic queries with variables, and conjunctive queries with
+variables and rules.
+• Ask Vebot: The third hour is a question-and-answer game in which the student must ask Vebot a
+question that answers the questions posed. The questions are of two types: true and false, and
+queries involving variables.
+The description of the content provided to the students is as follows [2], [3]:
+First Campaign of 1813. The independence movement in Venezuela began on April 19, 1810, with
+the Caracas town council giving rise to the First Republic.
+The First Republic was short-lived, as on 25 July 1812, a royalist army defeated the patriots and
+regained power. Many of the patriotic forces took refuge in Nueva Granada.
+Among the causes of La Campaña Admirable were the fall of the First Republic, Monteverde’s threat
+to invade Nueva Granada, and the patriotic forces’ desire to restore independence.
+Simón Bolivar, who is in Nueva Granada, intends to liberate Venezuela from the tyranny of Domingo
+Monteverde and reconstitute the Republic. His objective was to reach Caracas. He left Nueva Granada
+for Cucuta on 16 February 1813, with an expedition consisting of two divisions: Colonel Atanasio
+Girardot in the vanguard and Colonel José Félix Ribas in the rearguard.
+The patriotic army consisted of 500 men and invaded the territory occupied by the enemy. Meanwhile,
+the leader of the royalist army, Domingo Monteverde, awaits him, stationed in San Carlos with an army
+of approximately 17,000 men. The successful war actions carried out by Simón Bolivar:
+• The Battle of Cúcuta, where the independence troops of Simón Bolivar and the Spanish troops of
+Ramón Correa clashed. The patriots triumphed: 28 February 1813
+• The Admirable Campaign begins on 6 May 1813
+• Bolivar heads to Trujillo on June 14, 1813, and orders Ribas to march as quickly as possible from
+Mérida to Boconó. He also orders Girardot to Trujillo.
+• In Trujillo on 15 June 1813, Bolivar signed El Decreto de Guerra a Muerte against the Spanish
+and Canarians until they were granted freedom.
+• Battle of Agua de Obispos, on 18 June 1813, a clash took place between the forces of Atanasio
+Girardot and Manuel Cañas, resulting in the triumph of the patriotic leader and the elimination
+of troops that could hinder Bolívar’s advance.
+• Landing on the Guanare River (Barinas): 1 July 1813. Bolivar defeats a royalist detachment. After
+this action, the people of Mérida granted Bolivar the title of Liberator on 18 May 1813, in La Grita,
+Mérida.
+• Battle of Niquitao. On Friday, 2 July 1813, the patriotic column led by José Félix Ribas defeated
+the royalist forces led by Commander José Martí at Niquitao.
+• Battle of Horcones. This battle took place on 22 July 1813. The patriots, under José Félix Ribas,
+won this battle over the royalists, commanded by Commander Francisco Oberto.
+• Battle of Taguanes, in the plains of Cojedes state, took place on 31 July 1813. The battle was
+led by Simón Bolivar to close La Campaña Admirable before making his triumphant entry into
+Caracas. His opponent was the royalist Colonel Julian Izquierdo.
+• The Liberator makes his triumphant entry into Caracas on 6 August 1813.
+The route followed by the patriotic army is shown in the figure 1
+He has spent ninety days reaching Caracas, and the patriotic army completed the campaign with
+nearly 10,000 troops in its ranks. The Municipality of Caracas granted Simón Bolívar the honorary title
+of Liberator of Venezuela on 14 October 1813.
+These successes, along with those achieved in the east by Santiago Mariño and José Francisco
+Bermudez, in the Eastern Campaign would give rise to the formation of the Second Republic of Venezuela.
+Other consequences of La Campaña Admirable:
+Liberation of the western provinces of Mérida, Barinas, and Trujillo.
+• El Decreto de Guerra a Muerte against the royalists, which was in force until the signing of the
+Armisticio de Trujillo, in 1820.
+2.1. The brain of Vebot
+. We’ll call our agent Vebot. It won’t have a body, but rather a brain with data and relationships related
+to the events narrated in La Campaña Admirable. We’ll build it using a programming language called
+Prolog, with the help of BlocklyProlog 1.
+Vebot will be used as an active participant in a trivia game.
+Vebot’s brain is composed of:
+• Constant concepts and ground relationships with just one argument. Facts are statements that
+are assumed to be true. In Prolog, facts are written using a predicate name followed by arguments.
+For example:
+1 comandante(’Simon Bolivar’).
+2 comandante(’Jose Felix Rivas’).
+3 comandante(’Atanasio Girardot’).
+4 comandante(’Domingo Monteverde’).
+5 comandante(’Manuel Canas’).
+6 liberada(’Merida’).
+7 liberada(’Barinas’).
+8
+• Ground binary relationships: Relationships are characterized by having more than one argument
+that expresses the relationship between several objects. For example: jefe_campana(’Simon
+Bolivar’, ’Campana Admirable’), which indicates that Simón Bolivar is the chief of La Campaña
+Admirable. Another example is the relationship that indicates Simón Bolivar as the jefe of
+Atanasio Girardot and José Felix Rivas. It is indicated as:
+1 jefe(’Simon Bolivar’,’Atanasio Girardot’).
+2 jefe(’Simon Bolivar’,’Jose Felix Rivas’).
+3 jefe(’Domingo Monteverde’,’Manuel Canas’).
+4
+• Relationships with more than two objects: Relationships are characterized by having more than
+two arguments that express the relationship between several objects. For example: The winning
+commander faces the losing commander in battle.
+1 /* Relationships between more than two: The winning commander faces the losing
+commander in battle.*/
+2 enfrenta(’Atanasio Girardot’, ’Manuel Canas’, ’Agua de Obispo’).
+3 enfrenta(’Jose Felix Rivas’, ’Jose Marti’, ’Niquitao’).
+4 enfrenta(’Jose Felix Rivas’, ’Francisco Oberto’, ’Horcones’).
+5 enfrenta(’Simon Bolivar’, ’Julian Izquierdo’, ’Taguanes’).
+6
+The causes of La Campaña Admirable, as well as the consequences, can be expressed as follows:
+1 /* Causes of La Campana Admirable */
+2 causa(’Perdida de la Primera Republica’).
+3 /* Monteverde’s threats of invasion of New Granada*/
+4 amenaza(’Domingo Monteverde’,’Invasion a Nueva Granada’).
+5 /* Desires of patriotic forces to restore independence*/
+6 deseos(’restaurar la independencia’).
+7 /* Consequences of La Campana Admirable y */
+8 consecuencia(’Decreto Guerra a Muerte’, ’15 de junio 1813’).
+9 /*Loss of the royalist army of 6,000 troops*/
+10 perdida(’ejercito realista’, 6000).
+Questions to Vebot Vebot’s brain would be prepared to answer questions like the ones shown below.
+• Ground atomic queries: Is Simón Bolivar the leader of Atanasio Girardot? Is Monteverde the
+leader of José Felix Rivas?
+1 \’? jefe(’Simon Bolivar’,’Atanasio Girardot’).
+2 \textbf{true}
+3 \’? jefe(’Domingo Monteverde’,’Jose Felix Rivas’).
+4 \textbf{false}
+5
+• Atomic queries with variables: Questions with an unknown to answer the question what, when,
+where? For this part, the concept of variable is introduced. It is a variable because its content can
+vary. Variables are denoted by a string consisting of letters, numbers, underscore characters, and
+beginning with an upper-case letter or underscore, Such as: X, Command, T66. For example, the
+question what date did the Battle of Taguanes take place?
+1 ’? batalla(’Taguanes’, X).
+2 ’31 de julio 1813’
+3
+Another query using variable: Where the Battle of Niquitao takes place
+1 ’? lugar(X,’Niquitao’).
+2
+• Conjunctive queries: queries using the logical conjunction operator, and. Eg, who is the leader of
+the patriotic army and leader of the Campaña Admirable?
+1 /* Leader of the Patriotic Army and Head of the Admirable Campaign */
+2 ’? jefe_campana(X, ’Campana Admirable’),lider(X,’Ejercito Patriota’).
+3 /* where the Decreto de Guerra a Muerte was signed */
+4 ’? consecuencia(’Decreto Guerra a Muerte’, ’15 de junio 1813’),lugar(X,’
+Decreto Guerra a Muerte’).
+5 /* Routes to the Battle of Horcones site */
+6 lugar(X,’Horcones’), ruta(X,Y).
+7
+• Rules: When the truth of a fact depends on the truth of another fact or a group of facts, a
+rule is used. Rules allow for more elaborate relationships between objects where concepts and
+consequences are declared. For example:
+1 /* They are part of the patriotic army: they are commanders and their leader is
+Simon Bolivar. */
+2 efectivo_patriota(X):- comandante(X),jefe(’Simon Bolivar’,X).
+3 /* They are part of the royalist army: they are commanders and their chief is
+Domingo Monteverde.*/
+4 efectivo_realista(X):- comandante(X),jefe(’Domingo Monteverde’,X).
+5 /* Causes of La Campana Admirable*/
+6 causa_campana(X,Y,W,Z):- causa(X), amenaza(Y,W), deseos(Z).
+7
+• Recursive rules: A recursive definition is one that is made in terms of itself. Recursion can be
+explained using the routes between cities:
+1 ruta(X,Y) :- conecta(X,Y).
+2 ruta(X,Z) :- conecta(X,Y), ruta(Y,Z).
+3
+2.2. Ask Vebot
+Ask Vebot is a question-and-answer game related to the events of La Campaña Admirable. The game
+consists of a deck of cards, some identified by a red stripe, and others by a blue stripe. Each card has
+the participant’s question printed on its front side. Red cards indicate a true/false question. The blue
+cards, for their part, are questions whose answer requires the use of ground atomic queries, questions
+with variables or queries. The layout of the deck of cards is shown in the figure 2.
+Participants must be grouped into groups. Each person has a turn to pick up a card. The number of
+people in each group is determined at the time of the activity and depends on the number of students
+in the class. The group that accumulates the most points after using the deck of cards wins.
+All questions in the game will be answered through Vebot. The student’s task is that, once they have
+obtained a red or blue card, they must make the query to Vebot. If the student cannot formulate the
+question, the teacher will guide him or her to its correct implementation.
