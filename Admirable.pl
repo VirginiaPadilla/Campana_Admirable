@@ -1,8 +1,8 @@
-/* Vebot Brain:  Campana Admirable, Venezuela 1813 */
+/*  Brain:  Campana Admirable, Venezuela 1813 */
 /* 1.Concepto constante y relaciones con un solo argumento */ 
 objetivo('liberar a Venezuela de los Realistas').
 comandante('Simon Bolivar').
-comandante('Jose Felix Rivas').
+comandante('Jose Felix Ribas').
 comandante('Atanasio Girardot').
 comandante('Domingo Monteverde').
 comandante('Manuel Canas').
@@ -14,7 +14,7 @@ fecha_inicio('Cucuta', '6 de mayo 1813').
 fecha_fin('Caracas', '6 de agosto 1813').
 /* jefe  Comandante A de comandante B, */
 jefe('Simon Bolivar','Atanasio Girardot').
-jefe('Simon Bolivar','Jose Felix Rivas').
+jefe('Simon Bolivar','Jose Felix Ribas').
 jefe('Domingo Monteverde','Manuel Canas').
 jefe('Domingo Monteverde','Jose Marti').
 jefe('Domingo Monteverde','Francisco Oberto').
@@ -50,8 +50,8 @@ batalla('Taguanes', '31 de julio 1813').
  /* Relaciones entre mas de dos. */
   /* Enfrenta comandante ganador a comandante perdedor en batalla */
 enfrenta('Atanasio Girardot', 'Manuel Canas', 'Agua de Obispo').
-enfrenta('Jose Felix Rivas', 'Jose Marti', 'Niquitao').
-enfrenta('Jose Felix Rivas', 'Francisco Oberto', 'Horcones').
+enfrenta('Jose Felix Ribas', 'Jose Marti', 'Niquitao').
+enfrenta('Jose Felix Ribas', 'Francisco Oberto', 'Horcones').
 enfrenta('Simon Bolivar', 'Julian Izquierdo', 'Taguanes').
 /* Causas de Campana Admirable y */
 causa('Perdida de la Primera Republica').
@@ -69,7 +69,7 @@ liberada('Trujillo').
 perdida('ejercito realista', 6000).
 
 /* 3. Consultas atómicas */
-/* jefe('Simon Bolivar','Jose Felix Rivas')*/
+/* jefe('Simon Bolivar','Jose Felix Ribas')*/
 /*jefe('Domingo Monteverde','Atanasio Girardot'). */
 /*comandante('Simon Bolivar'). */
  /*Comandante('Manuel Canas'). */
@@ -107,6 +107,7 @@ perdedor(Y):- enfrenta(X,Y,Z).
 /*  Conexion entre sitios. Recursion  */ 
 ruta(X,Y) :- conecta(X,Y).
 ruta(X,Z) :- conecta(X,Y), ruta(Y,Z).
+
 
 # 
  
