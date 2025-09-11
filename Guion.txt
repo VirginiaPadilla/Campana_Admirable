@@ -1,16 +1,17 @@
 1- Presentation
 My name is Virginia Padilla. My presentation is titled " Gamifying History Education: A Prolog-Based Workshop Using  Geospatial Visualization"
 2- This is the content . 
-{{pause:5000}}
+
 3-
-Brief Overview of the contents
+              Brief Overview of the contents
  This documents presents an educational framework that transforms questions from a Prolog-based database into a historical learning experience. To this end, a card-based trivia game applied to history teaching is structured, with a progression mechanic, using a dual question system. The game includes dynamic map visualizations for historical locations, route visualization, and comparative analysis.
- Looking ahead, the use of a building-block language for the knowledge base and its integration with geovisualization capabilities are planned, which would further enhance the versatility of this framework in the historical, ecological, anthropological fields.
+ Looking ahead, the use of a building-block language for the knowledge base and its integration with geovisualization capabilities are planned.
 *********
-4- Prolog and visualization tools to teach history
+4-                  Prolog and visualization tools to teach history
+
 This workshop integrates Prolog with visualization tools to teach history through gamification.
 Why education in History?
-History education provides a rich framework for developing critical thinking, fostering citizenship, building collective identity, and promoting understanding of diverse cultures, equipping students with analytical tools to examine contemporary society and make informed decisions.
+History education provides a rich framework for developing critical thinking, fostering citizenship, building collective identity, and promoting understanding of diverse cultures.
 
 What does Prolog contribute to history studies? 
  Prolog's ability to represent complex historical events involving multiple actors, decisions, actions, planning and scenario studies
@@ -20,14 +21,14 @@ Maps, time series, and spatiotemporal narratives reveal relationships within dat
 ***********
 5- Prolog in the school
 
-There is a precedent for using Prolog for teaching historical facts in the work of Daniel Weissberg, who used micro-Prolog to model population dynamics during the siege of Montségur Castle in 1244. Weissberg emphasizes that computational tools in the humanities require a carefully structured representation of knowledge, since this foundation decisively influences subsequent interpretation and qualitative analysis.
+There is a precedent for using Prolog for teaching historical facts in the work of Daniel Weissberg, who used micro-Prolog to model population dynamics during the siege of Montségur Castle in 1244. 
 
 Moreover, there are recent initiatives advocate reintroducing Prolog in primary/secondary education. 
 
   -  Teaching with Prolog enhances logical reasoning, improves identification of entities/relationships, and develops skills in applying inference rules to derive implicit knowledge  
       
 **********
-6- Gamification
+6-                  Gamification
  Gamification applies game elements in non-gaming contexts  to encourage participation and optimize academic performance. 
 Effective gamification in education extends beyond superficial rewards to include:
  
@@ -37,7 +38,7 @@ Effective gamification in education extends beyond superficial rewards to includ
  ---  Progressive complexity levels demonstrating achievement
  --- Personalized learning pathways 
  
-By integrating game dynamics into education, gamification demonstrates significant transformative potential.
+
 
 **********************************************************************
 7- Workshop Design
@@ -58,7 +59,7 @@ The proposed workshop structure has three stages:
 
 ----- {Stage 2: Knowledge Base Construction}: Students extract information from source texts to encode entities, unary/binary relationships, and n-ary relationships. Formulating atomic queries, conjunctive queries, and rule creation are covered.
 
----- {Stage 3: Historical Inquiry Sessions}: Students complete trivia exercises using true/false questions, simple queries, rule-based queries, and geographic explorations. For contextual geographic visualizations, Prolog has been integrated with the Python Folium library for geospatial visualizations.
+---- {Stage 3: Historical Inquiry Sessions}: Students complete trivia exercises using true/false questions, simple queries, rule-based queries, and geographic explorations. 
    
 *************
 9- workshop content
@@ -71,15 +72,13 @@ The description of the content provided to the students is as follows:
 	La Campaña Admirable  was a military action framed within the Venezuelan war of independence. It was commanded by Simón Bolívar, supported militarily and economically by the government of  Nueva Granada and achieved the emancipation of western Venezuela, made up at that time by the provinces of Mérida, Barinas, Trujillo and Caracas.
 
 *************
-11- War actions is brief describe
+11- Brief description of the war actions.
 
-  ----La Campaña Admirable begins on 6 May 1813
-  -----Trujillo on 15 June 1813, Bolivar signed El Decreto de Guerra a Muerte against the Spanish and Canarians.
-   -----Battle of Agua de Obispos, on 18 June 1813, a clash took place between the forces of Atanasio Girardot and Manuel Canas.
-   -------- Battle of Niquitao. On 2 July 1813, the patriotic column led by José Félix Ribas defeated the royalist forces led by Commander José Martí.
---------- Battle of Horcones. On 22 July 1813. The patriots, under José Félix Ribas, won this battle over the royalists, commanded by Commander Francisco Oberto.
---------Battle of Taguanes,  on 31 July 1813. The battle was led by Simón Bolivar to close La Campaña Admirable before making his triumphant entry into Caracas.  
-------El libertador makes his triumphant entry into Caracas on 6 August 1813.
+--- The Admirable Campaign begins on May 6, 1813.
+--- On June 15, 1813, in Trujillo, Bolívar signed the Decree of War to the Death against the Spanish and the Canarians.
+--- Next, this is a list of battles that occurred in 1813, with their protagonists and locations.
+Finally,
+---El libertador makes his triumphant entry into Caracas on 6 August 1813.
 
 *************
 12	-
@@ -90,37 +89,38 @@ This was the route followed by the Liberation Army. The route includes passage t
 
 13- The knowledge Base
 
-This database includes information about La Campaña Admirable, represented in Prolog. For this document, we used SWI-Prolog for its encoding  for the database representation. Its contents are described below.
+This database includes information about La Campaña Admirable. Its contents are described below.
 
-Constant concepts and ground relationships with just one argument.} Facts are statements that are assumed to be true. In Prolog, facts are written using a predicate name followed by arguments. For example:
+Constant concepts and ground relationships with just one argument.  For example:
  
               comandante('Simon Bolivar').
-               comandante('Jose Felix Ribas').
-                comandante('Atanasio Girardot').
+                                
                or
             	liberada('Merida').
-                liberada('Barinas'). 
-    
+   
 *************
-14-  Ground binary relationships: Relationships are characterized by having more than one argument that expresses the relationship between several objects. For example: the relationship that indicates Simón Bolivar as the jefe of Atanasio Girardot and José Felix Ribas. It is indicated as: 
-           jefe('Simon Bolivar','Atanasio Girardot').
-            jefe('Simon Bolivar','Jose Felix Ribas'). 
-       
-and  jefe_campana('Simon Bolivar', 'Campana Admirable'),  which indicates that Simón Bolivar is the chief of La Campaña Admirable.
+14-  Ground binary relationships: Relationships are characterized by having more than one argument. For example: the relationship that indicates Simón Bolivar as the chief of Atanasio Girardot and José Felix Ribas. 
+It is indicated as: 
+  jefe('Simon Bolivar','Atanasio Girardot').
+   jefe('Simon Bolivar','Jose Felix Ribas'). 
+
+Simón Bolivar is the leader of La Campaña Admirable.      
+  jefe_campana('Simon Bolivar', 'Campana Admirable') 
        
 *************
 15-   
- Relationships with more than two objects: Relationships are characterized by having more than two arguments that express the relationship between several objects. For example: The winning commander faces the losing commander in battle.
+Relationships are characterized by having more than two arguments. For example: The winning commander faces the losing commander in battle.
     
        
-   Relationships between more than two: The winning commander faces the losing commander in battle. 
-            enfrenta('Atanasio Girardot', 'Manuel Canas', 'Agua de Obispo').
-            enfrenta('Jose Felix Ribas', 'Jose Marti', 'Niquitao').
+  The winning commander faces the losing commander in battle. 
+
+  enfrenta('Atanasio Girardot', 'Manuel Canas', 'Agua de Obispo').
+ enfrenta('Jose Felix Ribas', 'Jose Marti', 'Niquitao').
             
         
 *************
 16-  More about Relationships.
-  The causes of La Campaña Admirable, as well as the consequences, can be expressed as follows:    
+  The causes of La Campaña Admirable, as well as the consequences, can be expressed as these expressions:
            Causes of La Campaña Admirable: 
               Monteverde's threats of invasion of New Granada 
            Desires of patriotic forces to restore independence 
@@ -128,17 +128,17 @@ and  jefe_campana('Simon Bolivar', 'Campana Admirable'),  which indicates that S
         Consequences of La  Campaña Admirable             
       Loss of the royalist army of 6,000 troops 
 *************
-17-          Questions to the knowledge base
-        The knowledge base would be prepared to answer questions such as the ones shown below.    
-        -    Ground atomic queries: Is Simón Bolivar the leader of Atanasio Girardot? Is Monteverde the leader of José Felix Ribas?
+17-   
+        The knowledge base would be prepared to answer questions such as  
+        -    Ground atomic queries: Is Simón Bolivar the chief of Atanasio Girardot? Is Monteverde the chief of José Felix Ribas?
            
-        -  Atomic queries with variables: Questions with an unknown to answer the question what, when, where? For this part, the concept of  variable is introduced.  
-             For example, the question what date did the Battle of Taguanes take place?
+        -  Atomic queries with variables: queries with an unknown to answer the questions what, when, where? 
+    For example, the question what date did the Battle of Taguanes take place?
             
-              
- *************
 *************
-18- Conjunctive queries: queries using the logical conjunction operator, and.  Who is the leader of the patriotic army and leader of La Campaña  Admirable?
+18- Conjunctive queries: queries using the logical conjunction operator, and. 
+
+ Who is the leader of the patriotic army and leader of La Campaña  Admirable?
              
             Leader of the Patriotic Army and Head of the Admirable Campaign  
                   
@@ -147,20 +147,19 @@ and  jefe_campana('Simon Bolivar', 'Campana Admirable'),  which indicates that S
              Routes to the Battle of Horcones site 
                   
 *************
-19- Rules
- Rules: When the truth of a fact depends on the truth of another fact or a group of facts, a rule is used. Rules allow for more elaborate relationships between objects where concepts and consequences are declared. For example: 
+19- 
+ Rules allow for more elaborate relationships between objects. For example: 
     
         They are part of the patriotic army: they are commanders and their leader is Simon Bolivar.  
             
         They are part of the royalist army: they are commanders and their chief is Domingo Monteverde. 
              
          Causes of  La  Campaña  Admirable                     
-*************
+
 *************
 20- recursive Rules
   A recursive definition is one that is made in terms of itself. Recursion can be explained using the routes between cities:
-    
-             
+            
         
 *************
 21-Trivia Game
@@ -170,9 +169,9 @@ The database querying process is designed as a question-and-answer game centered
 22- Trivia Game
 
   Participants form groups, each selecting a name or avatar. Gameplay proceeds as follows:
---	Groups must answer at least five true/false questions (red cards) to reach 10 points.
+--	Groups must answer at least five true/false questions  to reach 10 points.
 --  Upon reaching 10 points, groups unlock blue card questions worth 4 points each.
---	The first group to accumulate 30 points wins..
+--	The first group to accumulate 30 points wins.
  
 The Figures  illustrates the deck design.
 *************
@@ -206,7 +205,9 @@ Outputs are shown in Figure
 *************
 26- Another Example
 
-{{pause:5000}}
+The following images show the base map to which layers provided by external services have been added. for example, layer with terrain elevations, and with satellite image. This adds a greater understanding of the path of the troops over the terrain covered. In addition, a supply planning exercise for troops could be designed considering the variables associated with geography.
+
+another example shows  the base map with a layer from a satellite image.
 
 *************
 28- Future Work
@@ -216,4 +217,10 @@ Outputs are shown in Figure
 *************
 *************
 29- conclusion
--- A process framework is presented that transforms the knowledge base query into a trivia game focused on historical events, using La Campaña Admirable  as an example.
+-- A process framework is presented that transforms the knowledge base query into a trivia game focused on historical events.
+-- By integrating game mechanics based on spatial visualization using Prolog-Python integration, a learning system has been proposed where students progress from true/false questions to complex queries.
+--A teacher-guided method has been outlined to ensure successful query formulation and knowledge discovery.
+*************
+30- conclusion
+-- Our proposal shows how game mechanics can structure technical skills in knowledge base consultation and at the same time encourage greater interaction with historical content.
+-- The sources of the presented workshop can be obtained at the address \url{https://github.com/VirginiaPadilla/Campana_Admirable}
